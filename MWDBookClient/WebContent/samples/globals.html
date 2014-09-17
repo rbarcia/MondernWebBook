@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Modern Web Development - JS Globals</title>
+    <script>
+		//-------------------------------------------------------------------
+		// This example shows just one use case of of a global variable 
+		// contributing to a 
+		//-------------------------------------------------------------------
+		function doSomething() {
+			var x = "My local doSomething Variable";
+			console.log("doSomething: ", x);
+		}
+		
+		function doSomethingElse() {
+			x = "My local doSomethingElse Variable";
+			console.log("doSomethingElse: ", x);
+		}
+		
+		var x = "My Global variable";
+		
+		console.log("My Global x = ", x);
+		doSomething();
+		doSomethingElse();
+		console.log("My Global x = ", x);
+		
+		//-------------------------------------------------------------------
+		//-- In this example, you may EXPECT to alter the global, but it is passed by value
+		//-- And therefor is treated as a local variable in the function!
+		//-------------------------------------------------------------------
+		function doubleValue( globalValue ) {
+			globalValue = globalValue * 2;
+			console.log("doubleValue results: ", globalValue);  // Shows 10
+		}
+		
+		var globalValue = 5;
+		console.log("My Global Value = ", globalValue);  // Shows: 5
+		doubleValue( globalValue );
+		console.log("My New Global Value = ", globalValue);  // Shows: 5  ?!?
+		
+		//-------------------------------------------------------------------
+		//-- Here is a sample of proper Global usage, where it is used 
+		//-- throught the application, and pasing it as a paramter would lead
+		//-- to extra confusion and cluttered code.
+		//-------------------------------------------------------------------
+		function getAccountDetails( accountId ) {
+			var acct = null;
+			if ( TEST_MODE ) {   // Good GLOBAL
+			 	// Never hard code test data within app code!
+				acct = TEST_DATA.ACCOUNT_DETAILS; 
+			} else {
+				acct = someRemoteAccessToAccount( accountId );
+			}
+			return acct;
+		}
+		var TEST_MODE = true;
+		var TEST_DATA = {
+			ACCOUNT_DETAILS : {firstName:"John", lastName:"Doe"},
+			TRANSACTIONS    : [/* ... */]
+		};
+		console.log("My Account details:", getAccountDetails( 12345 ) );
+		
+    </script>
+                
+</head>
+
+<!-- ################################################################################# -->
+<!-- ####################################  HTML: BODY  ############################### -->
+<!-- ################################################################################# -->
+<body class="mwd">
+	Look at the console to see how Js Globals can be corrupted.
+</body>
+</html>

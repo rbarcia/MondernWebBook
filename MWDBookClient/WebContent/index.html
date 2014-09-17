@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+<!-- ################################################################################# -->
+<!-- ####################################  HTML: HEAD  ############################### -->
+<!-- ################################################################################# -->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <!-- DEVELOPMENT TIME ONLY! REMOVE FOR PRODUCTION - prevent cache -->
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="pragma"        content="no-cache">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+
+    <title>Modern Web Development - Accounts</title>
+    <link href="/idt18/dijit/themes/claro/document.css" rel="stylesheet">
+    <link href="/idt18/dijit/themes/claro/claro.css"    rel="stylesheet">
+    <link rel="stylesheet" href="/idt18/dgrid/css/dgrid.css">
+	<link rel="stylesheet" href="/idt18/dgrid/css/skins/claro.css">
+	<link rel="stylesheet" type="text/css" href="/idt18/dojox/mobile/themes/custom/custom.css"></link>
+    <link href="./theme/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="./theme/bootstrap/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="./theme/theme.css"     rel="stylesheet">
+    <!-- configure and load dojo -->
+    <script>
+    var path = location.pathname.replace(/\/[^/]+$/, '');
+    var dojoConfig = {
+        parseOnLoad       : false,
+        async             : true,
+        packages: [
+            { name : 'app' , location : path + 'app'     }
+        ]
+    }
+    </script>
+    <script src="libraries/jquery-2.0.3.min.js"></script>
+    <script src="libraries/bootstrap.js"></script>
+    <script src="/idt18/dojo/dojo.js"></script>
+                
+    <script>
+        require([
+		    "dojo/ready",
+        	"app/app",
+        ], function(ready, app) {
+			ready(function() {
+				//-- Start app in 'normal' mode
+		        app.init({
+		        	//-- Leave at 'test' until real services are availble.
+		        	mode:'localserver'
+		        });
+		    });     
+        });
+    </script>        
+    
+</head>
+
+<!-- ################################################################################# -->
+<!-- ####################################  HTML: BODY  ############################### -->
+<!-- ################################################################################# -->
+<body id="main" class="mwd claro">
+	<!-- Love an empty body! -->
+</body>
+</html>

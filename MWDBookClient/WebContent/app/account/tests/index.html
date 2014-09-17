@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<!-- ################################################################################# -->
+<!-- ####################################  HTML: HEAD  ############################### -->
+<!-- ################################################################################# -->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <!-- DEVELOPMENT TIME ONLY! REMOVE FOR PRODUCTION - prevent cache -->
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="pragma"        content="no-cache">
+
+    <title>Modern Web Development - Accounts</title>
+    <link href="/idt18/dijit/themes/claro/document.css" rel="stylesheet">
+    <link href="/idt18/dijit/themes/claro/claro.css"    rel="stylesheet">
+    <link href="/idt18/gridx/resources/claro/Gridx.css" rel="stylesheet">
+    <link href="./../../../theme/theme.css"             rel="stylesheet">
+    <link href="./tests.css"                            rel="stylesheet">
+
+    <!-- configure and load dojo -->
+    <script>
+    var path = location.pathname.replace(/\/[^/]+$/, '');
+    var dojoConfig = {
+        parseOnLoad       : true,
+        async             : true,
+        packages: [
+            { name : 'app' , location : path + '../../../app'     }
+        ]
+    }
+    </script>
+    <script src="/idt18/dojo/dojo.js"></script>
+                
+    <script>
+        require([
+			"app/config",
+			"app/account/tests/TestAccount"
+        ], function( config ) {
+        	config.load([
+        	    "app/config.json",
+        	    "app/configTest.json"
+        	]);
+        });
+    </script>        
+    
+</head>
+
+<!-- ################################################################################# -->
+<!-- ####################################  HTML: BODY  ############################### -->
+<!-- ################################################################################# -->
+<body id="main" class="mwd claro">
+	<h1 style="text-align:center;color:blue;">MWDBook Test Page</h1>
+	<hr/>
+	<div data-dojo-type="app/account/tests/TestAccount"></div>
+	<hr/>
+	
+</body>
+</html>

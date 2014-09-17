@@ -1,0 +1,34 @@
+[
+	{
+		"id": 1,
+		"name": "Primary Checking",
+		"type": "Checking",
+		"balance": 1000.0,
+		"currency": "USD"
+	},{
+		"id": 2,
+		"name": "Primary Checking",
+		"type": "Checking",
+		"balance": 1000.0,
+		"currency": "USD"
+	},{
+		"id": 3,
+		"name": "Primary Checking",
+		"type": "Checking",
+		"balance": 1000.0,
+		"currency": "USD"
+	},{
+		"id": 4,
+		"name": "Primary Checking",
+		"type":"Checking" ,
+		"balance": 1000.0,
+		"currency": "GBP"
+	},
+	{
+		"id": 5,
+		"name": "Primary Savings",
+		"type": "Saving",
+		"balance": 1000.0,
+		"currency": "USD"
+	}
+]

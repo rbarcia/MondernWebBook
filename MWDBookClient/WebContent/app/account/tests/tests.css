@@ -1,0 +1,28 @@
+/* TestAccount Rules */
+.TestAccount h1 {
+	text-align: center;
+	color: blue;
+}
+.TestAccount .section {
+	width:100%;
+	margin: 10px auto;
+	text-align: center;
+}
+.TestAccount .section button{
+	height : 30px;
+	border-radius: 8px;
+}
+.TestAccount .container {
+	width:80%;
+	margin: 10px auto;
+	border: 2px solid blue;
+	background-color: #fff;
+}
+.TestAccount .code {
+	white-space : pre;
+	overflow: auto;
+}
+.TestAccount .error {
+	font-size : large;
+	color: red;
+}

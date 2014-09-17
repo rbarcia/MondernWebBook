@@ -1,0 +1,20 @@
+#sillybox {
+   	margin  : 8px auto;
+   	width   : 80%;
+   	height  : 200px;
+
+   	/* radial gradient */
+	background-image:         radial-gradient( 50% 50%, ellipse closest-side , #f0f392 0%, #03005f 100%);
+	background-image: -webkit-radial-gradient( 50% 50%, ellipse closest-side , #f0f392 0%, #03005f 100%);
+	background-image:    -moz-radial-gradient( 50% 50%, ellipse closest-side , #f0f392 0%, #03005f 100%);
+	background-image:      -o-radial-gradient( 50% 50%, ellipse closest-side , #f0f392 0%, #03005f 100%);
+	background-image:     -ms-radial-gradient( 50% 50%, ellipse closest-side , #f0f392 0%, #03005f 100%);
+
+	/* transition */
+   	        transition : width 2s, height 2s;
+   	-webkit-transition : width 2s, height 2s;
+}
+#sillybox:hover {
+   	width   : 40%;
+   	height  : 400px;
+}

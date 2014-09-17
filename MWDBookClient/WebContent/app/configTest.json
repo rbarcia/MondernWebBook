@@ -1,0 +1,20 @@
+{
+	"app/services" : {
+		"AccountList"       : "/mwdserverstub/rest/accounts/accounts.json",
+		"TransactionList"   : "/mwdserverstub/rest/accounts/${accountId}/transactions.json"
+	},
+	
+	"app/tranSizes":{
+		"defaultTranSize": 25,
+		"defaultTranMobileSize": 5
+	},
+	
+	"app/tests/config" : {
+		"myTestEntry"   : "Loaded from configTest.json"
+	},
+
+	"app/tests/config2" : {
+		"myTestEntry2"  : "Loaded from configTest.json"
+	}
+	
+}

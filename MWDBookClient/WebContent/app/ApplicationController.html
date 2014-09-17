@@ -1,0 +1,36 @@
+<div class="Account" data-dojo-attach-point="accountRoot">
+	<div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="banner_name_box">
+    		<div class="banner_logo"></div>
+      		<div class="banner_name">DoradoBank</div>
+   		 </div>
+          <div class="nav-collapse collapse">
+            <ul class="nav pull-right">
+              <li class="menuList accountItem"><a href="#account">${text.accountTitle}</a></li>
+              <li class="menuList billpayItem"><a href="#billpay">${text.billpayTitle}</a></li>
+              <li class="menuList transferItem"><a href="#transfer">${text.transferTitle}</a></li>
+              <li class="menuList contactItem"><a href="#contact">${text.contactusTitle}</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+	<div class="pagebody account" style="display:hidden;" data-dojo-attach-point="dapMain">
+	</div>
+	<div class="pagebody billpay" style="display:hidden;">
+		<h2>Pay Bill Place Holder</h2>
+	</div>
+	<div class="pagebody transfer" style="display:hidden;">
+		<h2>Money Transfer Place Holder</h2>
+	</div>
+	<div class="pagebody contactus" style="display:hidden;">
+		<h2>Contact Us Place Holder</h2>
+	</div>
+</div>

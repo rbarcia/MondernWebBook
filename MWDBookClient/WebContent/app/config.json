@@ -1,0 +1,15 @@
+{
+	"app/services" : {
+		"AccountList"       : "/MWDBookRest/jaxrs/accounts",
+		"TransactionList"   : "/MWDBookRest/jaxrs/accounts/${accountId}/transactions?size=${size}",
+		"TransactionDetail" : "/MWDBookRest/jaxrs/accounts/${accountId}/transactions/${transactionId}"
+	},	
+
+	"app/tranSizes":{
+		"defaultTranSize": 25,
+		"defaultTranMobileSize": 5
+	},
+	"app/account/AccountList" : {
+		"international" : true
+	}
+}

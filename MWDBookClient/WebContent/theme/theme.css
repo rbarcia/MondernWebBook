@@ -1,0 +1,244 @@
+/*
+
+*/
+
+
+body
+{
+    /* Webkit (Chrome 11+) */ 
+    background: -webkit-linear-gradient(bottom, #FFFFFF 0%, #9ACEFF 200%) no-repeat;
+    background: -moz-linear-gradient(bottom, #FFFFFF 0%, #9ACEFF 200%) no-repeat;
+    background: -o-linear-gradient(bottom, #FFFFFF 0%, #9ACEFF 200%)no-repeat;
+    background: -ms-linear-gradient(bottom, #FFFFFF 0%, #9ACEFF 200%)no-repeat;
+    background: linear-gradient(bottom, #FFFFFF 0%, #9ACEFF 200%)no-repeat;
+    font: 12px Myriad,Helvetica,Tahoma,Arial,clean,sans-serif;
+}
+
+.mobile body
+{
+	 background-color:#FFFFFF;
+}
+
+.navbar-inverse .navbar-inner
+{
+	background : -webkit-linear-gradient(#464646, #121212);
+	background: -moz-linear-gradient(bottom, #464646 0%, #121212 200%) no-repeat;
+    background: -o-linear-gradient(bottom, #464646 0%, #121212 200%)no-repeat;
+    background: -ms-linear-gradient(bottom, #464646 0%, #121212 200%)no-repeat;
+    background: linear-gradient(bottom, #464646 0%, #121212 200%)no-repeat;
+}
+
+.banner_name_box {
+    margin-left : 20px;
+    display : inline-block;
+    padding-top : 1px;
+    float : left;
+}
+.banner_logo {
+    display : inline-block;
+    width : 100px;
+    height : 50px;
+    background: url("./images/ibmlogo.png") no-repeat scroll 0 0 transparent;
+    vertical-align : middle;
+}
+.banner_name {
+    display:inline;
+    padding-left : 5px;
+    font : normal normal 18px Arial, sans-serif;
+    color : white;
+    text-shadow : black 1px 1px 1px;
+    
+}
+
+
+
+.viewPort {
+    float: left;
+    width: 90%;
+    box-shadow: 0 0 1px 1px #999;
+    background: white;
+    padding-left:10px;
+    padding-right:10px;
+    margin-top: 20px;
+	padding-bottom:10px;
+}
+
+.viewPort .left {
+    float:left;
+    width:400px;
+}
+
+.viewPort .right.dashboardRight {
+    float:left;
+    margin-left: 25px;
+    width:400px;
+}
+
+.viewPort h1 {
+
+    font-size:16px;
+    font-weight: bold;
+
+}
+
+
+
+/* GRIDX Settings */
+.gridx {
+	height: 100%;
+	width:100%;
+}
+
+.tranMobileDetail
+{
+	display:none;
+}
+
+.accBackButton
+{
+	width:100px;
+}
+
+.paybill
+{
+	display: none;
+}
+
+.moneytransfer
+{
+	display: none;
+}
+
+.contactus
+{
+	display: none;
+}
+
+
+@media (min-width: 768px)
+{
+	
+	
+	
+	.pagebody {
+
+	    margin-top:60px;
+	    z-index: 10001;
+	    margin-left: auto;
+	    margin-right: auto;
+	    width: 90%;
+	    
+	}
+	
+	.largeScreen
+	{
+		display:block;
+		height:200px;
+		margin-top: 20px;
+	}
+	
+	.smallScreen
+	{
+		display:none;
+	}
+	
+	ul.fieldList > * {
+    /* Note to all - DO NOT use clear here - it is document global 
+     * and will cause any float subsequent in the document 
+     * (not just this box) to push down beneath this box */
+    /* we could also use overflow: hidden but IE might act up */
+    overflow-y: auto;
+    overflow-x: hidden;
+	}
+	
+	ul.fieldList > li > label,
+	ul.fieldList > li > fieldset > legend {
+	    max-width: 190px;
+	    float:left;
+	    vertical-align: top;
+	    word-wrap: break-word;
+	    font-weight:bold;
+	    color:grey;
+	}
+	
+	ul.fieldList > li > div,
+	ul.fieldList > li > ul,
+	ul.fieldList > li > span,
+	ul.fieldList > li > fieldset > div {
+	    padding-left: 200px;
+	}
+	
+	ul.fieldList > li > * {
+	    display: block;
+	}
+	
+	ul.fieldList > li {
+	    list-style-type: none;
+	}
+	
+	ul.fieldList > li > ul > li:not(.hidden) + li,
+	ul.fieldList > li > ul > li:not(.hidden) ~ li {
+	    margin-top: 5px;
+	}
+	
+	ul.fieldList > li.fieldForm > div > div {
+	    float:left;
+	}
+	
+}
+
+@media (max-width: 767px)
+{
+	
+	.pagebody {
+
+	    margin-top:40px;
+	    z-index: 10001;
+	    margin-left: auto;
+	    margin-right: auto;
+	    width: 98%;
+	}
+	
+	.largeScreen
+	{
+		display:none;
+	}
+	
+	.smallScreen
+	{
+		display:block;
+	}
+	
+	
+	ul.fieldList > li > label,
+	ul.fieldList > li > fieldset > legend {
+	    max-width: 190px;
+	    float:left;
+	    vertical-align: top;
+	    word-wrap: break-word;
+	    font-weight:bold;
+	    color:grey;
+	}
+	
+	ul.fieldList > li {
+	    list-style-type: none;
+	}
+	
+	ul.fieldList > li > div,
+	ul.fieldList > li > ul,
+	ul.fieldList > li > span,
+	ul.fieldList > li > fieldset > div {
+	    padding-left: 120px;
+	}
+	
+	.container
+	{
+		margin-right:20px;
+		margin-left:20px;
+	}
+	
+	
+	
+}
+
+

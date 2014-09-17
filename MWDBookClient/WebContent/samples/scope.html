@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Modern Web Development - Scope</title>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/dojo/1.8.1/dojo/dojo.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    
+</head>
+
+<!-- ################################################################################# -->
+<!-- ####################################  HTML: BODY  ############################### -->
+<!-- ################################################################################# -->
+<body class="mwd">
+	Controlling scope within JavaScript.  Click buttons and look at console output.
+	<br/><br/>
+	<button id="SimpleButton">Simple Button</button>
+	<br/><br/>
+	<button id="DojoButton">Dojo Button</button>
+	<br/><br/>
+	<button id="JqueryButton">JQuery Button</button>
+
+    <script>
+    	require([
+	    	"dojo/dom",
+	    	"dojo/_base/lang"
+	    ], function( dom, lang ) {
+			//-------------------------------------------------------------------
+			// Simple object to maintain cick counter
+			//-------------------------------------------------------------------
+			var Clicker = {
+				
+				cntr : 0,
+				
+				incrementCounter : function() {
+					this.cntr++;
+					console.log("Current click count:", this.cntr);
+				},
+				
+				init : function() {
+					this.setupSimpleScope();				
+					this.setupDojoHitch();				
+					this.setupJqueryProxy();				
+				},
+				
+				setupSimpleScope : function() {
+					console.log("Simple button setup");
+					var _this = this;
+					document.getElementById("SimpleButton").onclick = function(evt) {
+						console.log("Simple button clicked. this =", _this);
+						_this.incrementCounter();
+					};
+				},
+				
+				setupDojoHitch : function() {
+					console.log("Dojo button setup");
+					dom.byId("DojoButton").onclick = lang.hitch( this, function(evt) {
+						console.log("Dojo button clicked. this =", this);
+						this.incrementCounter();
+					});
+				},
+				
+				setupJqueryProxy : function() {
+					console.log("JQuery button setup");
+					$("#JqueryButton").click( $.proxy( function() {
+						console.log("Jquery button clicked. this =", this);
+						this.incrementCounter();
+					}, this) );
+				}
+				
+			};
+			Clicker.init();
+		});		
+    </script>
+                
+
+</body>
+</html>

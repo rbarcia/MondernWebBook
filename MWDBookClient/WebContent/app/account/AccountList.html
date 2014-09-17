@@ -1,0 +1,13 @@
+ <div class="AccountList" data-dojo-attach-point="accountListRoot">
+ 	<h2 data-dojo-attach-point="dapHeading" >${text.heading}</h2>
+	<div class="largeScreen" data-dojo-attach-point="dapGrid" ></div>
+	<div class="smallScreen" >
+		<div data-dojo-attach-point="dapList" ></div>
+	</div>
+	<div class="largeScreen"data-dojo-attach-point="dapDetailSection" >
+		<h3 data-dojo-type="dojox/mobile/RoundRectCategory">${text.title}</h3>
+		<button 
+		class="smallScreen btn btn-link" data-dojo-attach-point="dapBackButton">Back to Accounts</button>
+		<div class="dapDetail" data-dojo-attach-point="dapDetail"></div>
+	</div>
+</div>

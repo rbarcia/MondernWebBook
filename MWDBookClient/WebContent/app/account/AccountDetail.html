@@ -1,0 +1,21 @@
+<div class="AccountDetail" data-dojo-attach-point="accountDetail">
+	
+		<div data-dojo-type="dojox/mobile/RoundRect">
+		
+		<ul class="fieldList"  data-dojo-attach-point="accountDetailHeader" type="text/x-handlebars-template">
+			<li>
+				<label>${text.acctNumber}</label>
+				<div>${account.id}</div>
+			</li>
+			<li>
+				<label>${text.acctName}</label>
+				<div>${account.name}</div>
+			</li>
+			<li>
+				<label>${text.acctBalance}</label>
+				<div>${account.formattedBalance}</div>
+			</li>
+		</ul>
+		</div>
+		<div data-dojo-attach-point="dapTranList"></div>
+</div>

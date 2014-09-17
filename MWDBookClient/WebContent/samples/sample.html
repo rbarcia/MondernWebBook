@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<!-- ################################################################################# -->
+<!-- ####################################  HTML: HEAD  ############################### -->
+<!-- ################################################################################# -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <!-- DEVELOPMENT TIME ONLY! REMOVE FOR PRODUCTION - prevent cache -->
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="pragma"        content="no-cache">
+
+    <title>Modern Web Development - Chapter 6 Samples</title>
+    <link href="/idt18/dijit/themes/claro/claro.css" rel="stylesheet">
+    <link href="../theme/theme.css" rel="stylesheet" type="text/css" >
+
+    <!-- configure and load dojo -->
+    <script>
+    var path = location.pathname.replace(/\/[^/]+$/, '');
+    console.log("Base Path:", path);
+    
+    var dojoConfig = {
+        parseOnLoad       : true,
+        async             : true,
+        dojoBlankHtmlUrl  : path + '/blank.html',
+        packages: [
+            { name : 'samples' , location : path + '/../samples'  }
+        ]
+    }
+    </script>
+    <script src="/idt18/dojo/dojo.js"></script>
+        
+    <script>
+        require([
+            "dojo/parser",
+            "dojo/ready",
+            
+            "samples/SampleWidget",
+            "dojo/domReady!"
+       ],function( parser, ready ) {
+            ready(function() {
+                console.log("Application is ready to go");
+            });         
+        });
+    </script>        
+    
+</head>
+
+<!-- ################################################################################# -->
+<!-- ####################################  HTML: BODY  ############################### -->
+<!-- ################################################################################# -->
+<body class="mwd claro">
+
+    <div data-dojo-type="samples/SampleWidget"
+        data-dojo-props="title: 'Our Sample Widget'">
+        <p>This is arbitrary content!</p>
+        <p>More arbitrary content!</p>
+    </div>
+    
+</body>
+</html>

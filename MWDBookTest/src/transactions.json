@@ -1,0 +1,17 @@
+[{
+	"id": 1,
+	"date": 1362756975616,
+	"memo": "Purchase",
+	"amount": 20.0,
+	"tranType": "WITHDRAWL",
+	"currency": "USD",
+	"merchant": "Hallmark Cards"
+},{
+	"id": 3,
+	"date": 1362756977678,
+	"memo": "DEPOSIT 200 TO ATM",
+	"amount": 200.0,
+	"tranType": "DEPOSIT",
+	"currency": "USD",
+	"merchant": "ATM"
+}]

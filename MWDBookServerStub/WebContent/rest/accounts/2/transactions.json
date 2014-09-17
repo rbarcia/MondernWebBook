@@ -1,0 +1,42 @@
+[{
+	"id": "111-001-001",
+	"date": 1375452810248,
+	"amount": 2345,
+	"currency": "USD",
+	"merchant": "Hallmark Cards",
+	"memo": "Valentines day card",
+	"tranType": "PURCHASE"
+},{
+	"id": "111-001-002",
+	"date": 1375402810248,
+	"amount": 2345,
+	"currency": "USD",
+	"merchant": "Exxon",
+	"memo": "Gas",
+	"tranType": "PURCHASE"
+},{
+	"id": "111-001-003",
+	"date": 1375397810248,
+	"amount": 2345,
+	"currency": "USD",
+	"merchant": "ATM",
+	"memo": "ATM",
+	"tranType": "WITHDRAWL"
+},{
+	"id": 5,
+	"date": 1375392810248,
+	"currency": "GBP",
+	"memo": "DEPOSIT 100 TO BANK",
+	"amount": 100.0,
+	"tranType": "DEPOSIT",
+	"merchant": "TELLER"
+},{
+	"id": "111-001-005",
+	"date": 1375392310248,
+	"amount": 2345,
+	"currency": "USD",
+	"merchant": "TELLER",
+	"memo": "TELLER",
+	"tranType": "DEPOSIT"
+}
+]
